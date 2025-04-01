@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "AliExpress Total Price",
+    "version": "1.0",
+    "author": "provincialcxz",
+    "description": "Shows the total cost of the product with delivery",
+    "icons": {
+        "128": "icon.png"
+    },
+    "content_scripts": [{
+        "matches": [
+            "*://*.aliexpress.com/*",
+            "*://aliexpress.ru/*"
+        ],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+    }],
+    "permissions": ["activeTab"]
+}
